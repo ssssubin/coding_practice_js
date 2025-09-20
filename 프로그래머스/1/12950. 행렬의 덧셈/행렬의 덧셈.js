@@ -1,11 +1,6 @@
 function solution(arr1, arr2) {
-    const answer = [];
-    arr1.forEach((value1, index1) => {
-        const arrValue = [];
-        value1.forEach((value2, index2) => {
-            arrValue.push(value2 + arr2[index1][index2]);
-        });
-       answer.push(arrValue); 
+    const answer = arr1.map((value1, index1) => {
+    return value1.map((value2, index2) => value2 + arr2[index1][index2]);
     });
     return answer;
 }
